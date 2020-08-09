@@ -7,5 +7,17 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - id: step1
-      run: echo `ls -la`
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Installing PHP
+      run: echo 'test' > test.txt
+    - name: git setting
+      run: |
+        git config --local user.email "test@example.com"
+        git config --local user.name "akkey247"
+    - name: Commit files
+      run: |
+        git add .
+        git commit -m "test" -a
+        git pull
+        git push origin master
