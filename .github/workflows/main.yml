@@ -6,13 +6,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      output1: ${{ steps.step1.outputs.test1 }}
-      output2: ${{ steps.step2.outputs.test1 }}
-      output3: ${{ steps.step1.outputs.test2 }}
-      output4: ${{ steps.step2.outputs.test2 }}
     steps:
     - id: step1
       run: echo "::set-output name=test1::helloaaa"
     - id: step2
       run: echo "::set-output name=test2::worldaaa"
+    outputs:
+      output1: ${{ steps.step1.outputs.test1 }}
+      output2: ${{ steps.step2.outputs.test1 }}
+      output3: ${{ steps.step1.outputs.test2 }}
+      output4: ${{ steps.step2.outputs.test2 }}
