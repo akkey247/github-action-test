@@ -7,8 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.step1.outputs.test2 }}
-      output2: ${{ steps.step2.outputs.test2 }}
+      output1: ${{ steps.step1.outputs.test1 }}
+      output2: ${{ steps.step2.outputs.test1 }}
+      output3: ${{ steps.step1.outputs.test2 }}
+      output4: ${{ steps.step2.outputs.test2 }}
     steps:
     - id: step1
       run: echo "::set-output name=test1::helloaaa"
