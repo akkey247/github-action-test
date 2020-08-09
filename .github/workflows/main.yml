@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: step1
-      run: touch test2.txt
+      run: cat test2.txt
