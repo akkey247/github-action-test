@@ -11,6 +11,6 @@ jobs:
       output2: ${{ steps.step2.outputs.test2 }}
     steps:
     - id: step1
-      run: echo "::set-output name=test::helloaaa"
+      run: echo "::set-output name=test1::helloaaa"
     - id: step2
-      run: echo "::set-output name=test::worldaaa"
+      run: echo "::set-output name=test1::worldaaa"
